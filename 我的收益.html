@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的收益</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/index.js"></script>
+	
+</head>
+<style>
+	html,
+	body{
+		/* background: #fff; */
+		min-height: 100vh;
+	}
+</style>
+<body>
+	<section class="header flex-center">
+		收益
+	</section>
+	<section class="blue_top flex-center">
+		<p>本月累计提成收益（元）</p>
+		<p class="font-w">8989.0</p>
+	</section>
+	<section class="echarts">
+		<div  id="container"></div>
+		<div class="font flex-start">
+			<div class="line2"></div>
+			默认近7日业绩数据统计
+		</div>
+	</section>
+	<section class="profit">
+		<div class="profit_top flex-space-between">
+			<div class="left flex-start">
+				<img src="images/jl.png" class="icon3">
+				收益明细
+			</div>
+			<img src="images/th.png" class="icon3">
+		</div>
+		<div class="profit_bottom">
+			<div class="profit_bottom_top flex-space-between">
+				<p>类别</p>
+				<p>收益（元）</p>
+			</div>
+			<div class="porcon">
+				<div class="part  flex-space-between">
+					<p>提成收益</p>
+					<p class="corr">+0</p>
+				</div>
+				<div class="part  flex-space-between">
+					<p>基本工资</p>
+					<p class="corb">+0</p>
+				</div>
+				<div class="part  flex-space-between bor">
+					<p>奖金</p>
+					<p class="corhs">+0</p>
+				</div>
+				<div class="part  flex-space-between bor">
+					<p>扣款</p>
+					<p class="corhs">+0</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="footers flex-center">
+		温馨提示：当月提成之外的收益在次月10日前计算出结果
+	</section>
+	<!-- footer start-->
+	<div class="cd-top"><img src="images/top.png"/></div>
+	<div class="dgao"></div>
+	<footer>
+	<ul>
+		<li class="home"><a href="v2首页.html"><img src="images/home1.png" onmouseover="this.src='images/home1_1.png';" onmouseout="this.src='images/home1.png';"><p>首页</p></a></li>
+	    <li class="home"><a href="我的业绩.html"><img src="images/home2.png" onmouseover="this.src='images/home2_1.png';" onmouseout="this.src='images/home2.png';"><p>业绩</p></a></li>
+	    <li class="home"><a href="我的订单.html"><img src="images/home3.png" onmouseover="this.src='images/home3_1.png';" onmouseout="this.src='images/home3.png';"><p>订单</p></a></li>
+	    <li class="home"><a href="个人中心.html"><img src="images/home4.png" onmouseover="this.src='images/home4_1.png';" onmouseout="this.src='images/home4.png';"><p>我的</p></a></li>
+	    <div class="clear"></div>
+	</ul>
+	</footer>
+	<!-- footer end -->
+	<script src="js/echarts.min.js"></script>
+	<script>
+	var dom = document.getElementById("container");
+	var myChart = echarts.init(dom);
+	var app = {};
+	var option;
+	option = { 
+		title: {
+                text: '月度收益'
+            },
+	    xAxis: {
+	        type: 'category',
+	        data: ['20210309', '', '20210311', '', '20210313', '', '20210315']
+	    },
+	    yAxis: {
+	        type: 'value',
+			 min: 0,
+			 max: 150,
+			// data: ['0', '30', '60', '90','120', '150']
+	    },
+	    series: [{
+	        data: [12, 3, 45, 66,77, 32],
+	        type: 'line',
+	        smooth: true
+	    }]
+	};
+	if (option && typeof option === 'object') {
+	    myChart.setOption(option);
+	}
+	</script>
+</body>
+</html>

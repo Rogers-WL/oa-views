@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>日志查阅</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<style>
+	html,
+	body{
+		/* background: #f8f9fb; */
+		min-height: 100vh;
+	}
+	.journal_up{
+		display: block;
+   }
+
+   .journal_up_box{
+   	    background-color: #fff;
+	   	padding:10px 20px;
+		font-size: .26rem;
+		color: #333;
+		margin:0 0 8px 0;
+   }
+
+    .journal_up_title{
+    	font-weight: bold;
+    	line-height: 32px;
+    	padding: 5px 0;
+    }
+
+    .journal_up_comment{
+    	border-top: 1px solid #fff;
+    	border-left: 1px solid #fff;
+    	border-right: 1px solid #fff;
+    	border: 1px solid #ededed;
+    	padding-left: 5px; 
+    	font-size: .24rem;
+    	line-height: 24px;
+    	color: #999;
+    	border-radius: 5px;
+    }
+
+    .journal_up_instructions{
+    	border: 1px solid #d5d5d5;
+    	padding-left: 5px; 
+    	font-size: .24rem;
+    	line-height: 24px;
+    	color: #999;
+    	border-radius: 5px;
+    }
+
+    .journal_up_inputs{
+    	margin-bottom: 15px;
+    }
+    .journal_up_bot{
+		width: 100%;
+		height: .6rem;
+		border-radius: .1rem;
+		font-size: .24rem;
+		color: #fff;
+		background: #017eff;
+		margin:25px 0 5px 0;
+    }
+    .flex-space-left{
+    	display: flex;
+    	align-items: left;
+    }
+    .img_list_box{padding-left: 10px;}
+    .img_list_one{max-width: 53px; padding-right: 10px;}
+</style>
+<body>
+
+	<section class="header flex-center">
+		<a href="##">
+			<img src="images/backb.png"  class="back_icon">
+		</a>
+		日志查阅
+	</section>
+
+	<section class="journal_up">
+		<div class="journal_up_box">
+				<div class="journal_up_title flex-start">
+					<p>已完成工作</p>
+				</div>
+				<div class="flex-start">
+					<textarea cols="50" rows="2" class="journal_up_comment" maxlength="200">今日完成：业绩10000元；回访客户30个；重点客户5个；山东某某某客户已成交。</textarea>
+				</div>
+
+				<div class="journal_up_title flex-start">
+					<p>需要协调工作</p>
+				</div>
+				<div class="flex-start">
+					<textarea cols="50" rows="2" class="journal_up_comment" maxlength="200">今日广东某某某客户因某某某问题需要明日主管领导进行协助。</textarea>
+				</div>
+
+				<div class="journal_up_title flex-start">
+					<p>备注</p>
+				</div>
+				<div class="flex-start">
+					<textarea cols="50" rows="1" class="journal_up_comment" maxlength="200">备注内容。</textarea>
+				</div>
+		</div>
+
+		<div class="journal_up_box">
+
+            <div class="flex-space-left">
+				<div class="journal_up_title flex-start">
+					<p>图片</p>
+				</div>
+				<div class="img_list_box">
+					<img src="images/screenshot.jpg" class="img_list_one jpic">
+				</div>
+			</div>
+
+            <div class="flex-space-between">
+				<div class="journal_up_title flex-start">
+					<p>附件</p>
+				</div>
+				<div class="journal_up_right flex-start">
+					<img src="images/upenclosure.jpg" style="max-width: 26px;">
+				</div>
+			</div>
+		</div>
+
+		<div class="journal_up_box">
+			<div class="journal_up_title flex-start">
+				<p>批示</p>
+			</div>
+			<div class="flex-start">
+				<textarea cols="50" rows="3" class="journal_up_instructions" maxlength="200"></textarea>
+			</div>
+	
+			<div class="journal_up_bot flex-center">已查阅</div>
+		</div>
+
+	</section>
+
+	<div id="outerdiv" style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+    <div id="innerdiv" style="position:absolute;">
+        <img id="bigimg" style="border:5px solid #fff;" src="" />
+    </div>
+	
+	<!-- footer start-->
+
+	<!-- footer end -->
+</body>
+<script>
+	$(function(){  
+        $(".jpic").click(function(){  
+            var _this = $(this);//将当前的pimg元素作为_this传入函数  
+            imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+        });  
+    }); 
+	function imgShow(outerdiv, innerdiv, bigimg, _this){  
+        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+        $(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+      
+            /*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+        $("<img/>").attr("src", src).load(function(){  
+            var windowW = $(window).width();//获取当前窗口宽度  
+            var windowH = $(window).height();//获取当前窗口高度  
+            var realWidth = this.width;//获取图片真实宽度  
+            var realHeight = this.height;//获取图片真实高度  
+            var imgWidth, imgHeight;  
+            var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+              
+            if(realHeight>windowH*scale) {//判断图片高度  
+                imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放  
+                imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度  
+                if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度  
+                    imgWidth = windowW*scale;//再对宽度进行缩放  
+                }  
+            } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度  
+                imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放  
+                            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度  
+            } else {//如果图片真实高度和宽度都符合要求，高宽不变  
+                imgWidth = realWidth;  
+                imgHeight = realHeight;  
+            }  
+                    $(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+              
+            var w = (windowW-imgWidth)/2;//计算图片与窗口左边距  
+            var h = (windowH-imgHeight)/2;//计算图片与窗口上边距  
+            $(innerdiv).css({"top":h, "left":w});//设置#innerdiv的top和left属性  
+            $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+        });  
+          
+        $(outerdiv).click(function(){//再次点击淡出消失弹出层  
+            $(this).fadeOut("fast");  
+        });  
+    }
+</script>
+</html>

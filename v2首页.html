@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<style>
+	html,
+	body{
+		/* background: #fff; */
+		min-height: 100vh;
+	}
+	.head_div{height: 50px; background-color: #fff; }
+	.head_name{color: #000; font-size: .26rem; font-weight: bold;}
+	
+	.myheader_rili{color: #fff; font-size: .26rem; margin-bottom: 50px;}
+    .myheader_yj{height:80px; color: #fff; font-size: .24rem; text-align:center; line-height: 26px;}
+    
+    .my_tjyy{font-size: .26rem; font-weight: bold; margin: 0 10px 10px 10px;}
+    .my_tjyys{font-size: .20rem; margin: 0 40px 10px 40px;}
+    .my_tjyyss{flex-direction:column; line-height: 26px;}
+
+    .myact{background-color: #fff; font-size: .20rem; height: 40px; border-bottom: 2px solid #ECE9E9; margin-top:10px;}
+    .myact>ul{width: 100%;height: 100%;}
+    .myact_db{
+    	margin: 10px 20px;
+		width:1.0rem;
+		text-align: center;
+
+		border-bottom: 2px solid #d12d24;
+		color: #000;
+		font-weight: bold;
+		padding-bottom: .1rem;
+	}
+	.nomyact_db{
+		margin: 10px 20px;
+		width:1.0rem;
+		text-align: center;
+	}
+	.myact .myact_db>a{
+		color: #000;
+		font-weight: bold;
+	}
+	.box_myact{background-color: #fff; font-size: .20rem; padding: 10px 20px; height: 164px; }
+	.box_myact_sub{flex-direction:column; line-height: 26px; width:85px;float:left;text-align: center;}
+
+</style>
+<body>
+	<div class="head_div flex-space-between">
+		<div style="margin-left: 10px; " class="flex-start" >
+			<img src="images/headerimg.png" />
+			<span class="head_name">&nbsp;&nbsp;刘诗诗，你好！</span>
+		</div>
+		<img src="images/setimg.png" style="margin-right: 10px;" />
+	</div>
+
+	<header class="myheader">
+		<div class="hedad_top flex-space-between myheader_rili">
+			<span>2021年06月20号 星期日 </span>
+			<span class="flex-center"><img src=images/qing.png /><font style="font-size: .34rem">35°C</font>晴</span>
+		</div>
+		<div class="myheader_yj flex-space-between">
+			<div class="flex-center">
+			    <p><b>10</b><br/>今日发单</p>
+			</div>
+			<div class="flex-center">
+				<p><b>5</b><br/>今日激活</p>
+			</div>
+			<div class="flex-center">
+				<p><b>68</b><br/>月发单量</p>
+			</div>
+			<div class="flex-center">
+				<p><b>34</b><br/>月激活量</p>
+			</div>
+		</div>
+	</header>
+
+	<section class="goicon">
+		<div class="my_tjyy flex-start">
+			<img src="images/my_yytj.png" />
+			<span>&nbsp;&nbsp;推荐应用</span>
+		</div>
+
+		<div class="my_tjyys flex-space-between" >
+			<div class="my_tjyyss flex-center">
+				<img src="images/yjgl.png" /><p>业绩管理</p>
+			</div>
+			<div class="my_tjyyss flex-center">
+				<img src="images/khgl.png" /><p>客户管理</p>
+		    </div>
+			<div class="my_tjyyss flex-center">
+				<img src="images/dbsx.png" /><p>代办事项</p>
+		    </div>
+			<div class="my_tjyyss flex-center">
+				<img src="images/gzrz.png" /><p>工作日志</p>
+		    </div>
+		</div>
+
+		<a href="##">
+			<img src="./images/adpic.png" >
+		</a>
+	</section>
+
+	<div class="myact">
+		<ul class="flex-start">
+			<li class="nomyact_db" ><a href="##">终端管理</a></li>
+			<li class="nomyact_db" ><a href="##">培训管理</a></li>
+			<li class="myact_db" ><a href="##">行政管理</a></li>
+		</ul>
+	</div>
+
+    <section class="mytab">
+		<div class="box_myact " style="display: none;">
+			111111
+		</div>
+
+		<div class="box_myact " style="display: none;">
+			22222
+		</div>
+
+		<div class="box_myact " >
+			<div class="box_myact_sub ">
+				<a href="v1_公告.html"><img src="images/tzgg.png" /><p>通知公告</p>
+			</div>
+			<div class="box_myact_sub ">
+				<img src="images/rizhigl.png" /><p>日志管理</p>
+		    </div>
+			<div class="box_myact_sub ">
+				<img src="images/rcgl.png" /><p>日程管理</p>
+		    </div>
+			<div class="box_myact_sub ">
+				<img src="images/yjgll.png" /><p>业绩管理</p> 
+		    </div>
+		    <div class="box_myact_sub ">
+				<img src="images/qjsp.png" /><p>请假审批</p>
+		    </div>
+		    <div class="box_myact_sub ">
+				<img src="images/bxsp.png" /><p>报销审批</p>
+		    </div>
+		    <div class="box_myact_sub ">
+				<img src="images/xzgl.png" /><p>薪资管理</p>
+		    </div>
+		</div>
+	
+	</section>
+
+
+	<!-- footer start-->
+	<div class="cd-top"><img src="images/top.png"/></div>
+	<div class="dgao"></div>
+	<footer>
+		<ul>
+	    	<li class="home"><a href="v2首页.html"><img src="images/home1.png" onmouseover="this.src='images/home1_1.png';" onmouseout="this.src='images/home1.png';"><p>首页</p></a></li>
+	        <li class="home"><a href="我的业绩.html"><img src="images/home2.png" onmouseover="this.src='images/home2_1.png';" onmouseout="this.src='images/home2.png';"><p>业绩</p></a></li>
+	        <li class="home"><a href="我的订单.html"><img src="images/home3.png" onmouseover="this.src='images/home3_1.png';" onmouseout="this.src='images/home3.png';"><p>订单</p></a></li>
+	        <li class="home"><a href="个人中心.html"><img src="images/home4.png" onmouseover="this.src='images/home4_1.png';" onmouseout="this.src='images/home4.png';"><p>我的</p></a></li>
+	        <div class="clear"></div>
+	    </ul>
+	</footer>
+	<!-- footer end -->
+</body>
+</html>
