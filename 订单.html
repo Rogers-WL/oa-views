@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>全部订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<style>
+	html,
+	body{
+		/* background: #f8f9fb; */
+		min-height: 100vh;
+	}
+	.status {
+		font-size: 22px;
+		background: none;
+	}
+	.red {
+		padding: 0;
+		border: none;
+		color: #F00030;
+	}
+	.orange {
+		color: #FF9D02;
+	}
+	.blue {
+		color: #007EFF;
+	}
+	.green {
+		padding: 0;
+		border: none;
+		color: #1ABD00;
+	}
+	.name-line {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.price-line {
+		font-size: 18px;
+		text-align: right;
+		padding: 8px 0;
+	}
+	.rmb {
+		font-size: 14px;
+	}
+	.actual-price {
+		margin-left: 12px;
+		color: #000000;
+	}
+	.op-line {
+		display: flex;
+		justify-content: flex-end;
+	}
+	.plain-btn {
+		border-radius: 20px;
+		border: solid 2px;
+		padding: 4px 10px;
+	}
+</style>
+<body>
+	<section class="header flex-center">
+		全部订单
+	</section>
+	<header class="top">
+		<ul class="flex-space-between">
+			<li class="act"><a href="##">全部</a></li>
+			<li><a href="##">待发货</a></li>
+			<li><a href="##">待收货</a></li>
+			<li><a href="##">已签收</a></li>
+			<li><a href="##">已拒收</a></li>
+		</ul>
+	</header>
+	<section class="tab">
+		<div class="box show">
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status red">已拒收</span></span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+			</a>
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status orange">待发货</span></span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+				<p class="op-line"><span class="plain-btn orange">确认发货</span></p>
+			</a>
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status blue">待收货</span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+				<p class="op-line"><span class="plain-btn blue">确认收货</span></p>
+			</a>
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status green">已签收</span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+			</a>
+		</div>
+		<div class="box">
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status orange">待发货</span></span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+				<p class="op-line"><span class="plain-btn orange">确认发货</span></p>
+			</a>
+		</div>
+		<div class="box ">
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status blue">待收货</span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+				<p class="op-line"><span class="plain-btn blue">确认收货</span></p>
+			</a>
+		</div>
+		<div class="box ">
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status green">已签收</span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+			</a>
+		</div>
+		<div class="box ">
+			<a href="##">
+				<div class="shoptop">
+					<p class="flex-space-between1"><span>客户名字：西门吹雪</span><span class="flex-start redfont"><span class="status red">已拒收</span></span></p>
+					<p class="ell1 wid">产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款 <span class="rmb">¥</span>18687</span></p>
+			</a>
+		</div>
+	</section>
+	<!-- footer start-->
+	<div class="cd-top"><img src="images/top.png"/></div>
+	<div class="dgao"></div>
+	<footer>
+	<ul>
+		<li class="home"><a href="v2首页.html"><img src="images/home1.png" onmouseover="this.src='images/home1_1.png';" onmouseout="this.src='images/home1.png';"><p>首页</p></a></li>
+	    <li class="home"><a href="我的业绩.html"><img src="images/home2.png" onmouseover="this.src='images/home2_1.png';" onmouseout="this.src='images/home2.png';"><p>业绩</p></a></li>
+	    <li class="home"><a href="订单.html"><img src="images/home3.png" onmouseover="this.src='images/home3_1.png';" onmouseout="this.src='images/home3.png';"><p>订单</p></a></li>
+	    <li class="home"><a href="个人中心.html"><img src="images/home4.png" onmouseover="this.src='images/home4_1.png';" onmouseout="this.src='images/home4.png';"><p>我的</p></a></li>
+	    <div class="clear"></div>
+	</ul>
+	</footer>
+	<!-- footer end -->
+</body>
+</html>

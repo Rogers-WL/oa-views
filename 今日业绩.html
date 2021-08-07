@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全部订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 10px;
+			background-color: #EAEAEA;
+		}
+
+		.header {
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+			padding: 16px;
+			background-color: #007EFF;
+			color: white;
+		}
+
+		.header>a {
+			position: absolute;
+			left: 0;
+			padding: 0 1.2rem;
+		}
+
+		.back-icon {
+			height: 2rem;
+		}
+
+		.panel {
+			display: flex;
+			flex-direction: column;
+			font-size: 2rem;
+			padding: 1.2rem 0 4rem 0;
+			background: url(images/head-bg.png) no-repeat;
+			background-size: cover;
+			color: white
+		}
+
+		.panel-line {
+			display: flex;
+			/* justify-content: space-around; */
+			padding: 2rem 0;
+		}
+
+		.icon {
+			width: 2.2rem;
+			height: 2.2rem;
+		}
+
+		.item-wrap {
+			flex: 1;
+			display: flex;
+			padding-left: 1.6rem;
+		}
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			margin-left: 0.8rem;
+		}
+
+		.title {
+			font-size: 1.6rem;
+			color: #FFFFFFCC;
+			margin-top: 0.6rem;
+		}
+
+		.value {
+			font-size: 2rem;
+		}
+
+		.info {
+			transform: translateY(-4rem);
+			background-color: #FFF;
+			margin: 0 1.2rem;
+			padding: 1.6rem 1.2rem;
+			border-radius: 0.4rem;
+			display: flex;
+			font-size: 1.4rem;
+		}
+
+		.info-item {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.info .divide {
+			border-left: #EAEAEA solid 0.2rem;
+		}
+
+		.list {
+			background-color: #FFF;
+			font-size: 1.6rem;
+			color: #333;
+		}
+
+		.price-line {
+			font-size: 18px;
+			text-align: right;
+		}
+
+		.rmb {
+			font-size: 14px;
+		}
+
+		.actual-price {
+			margin-left: 12px;
+			color: #000000;
+		}
+	</style>
+	<body>
+		<div class="header">
+			<a href="##">
+				<img onclick="window.history.back()" src="images/back.png" class="back-icon">
+			</a>
+			今日业绩
+		</div>
+		<div>
+			<div class="panel">
+				<div class="panel-line">
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-001.png" />
+						<div class="item">
+							<span class="title">支付金额(元)</span>
+							<span class="value">2309.24</span>
+						</div>
+					</div>
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-002.png" />
+						<div class="item">
+							<span class="title">支付订单数</span>
+							<span class="value">40</span>
+						</div>
+					</div>
+				</div>
+				<div class="panel-line">
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-003.png" />
+						<div class="item">
+							<span class="title">新增会员数</span>
+							<span class="value">1</span>
+						</div>
+					</div>
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-004.png" />
+						<div class="item">
+							<span class="title">新增储值金额(元)</span>
+							<span class="value">10100.01</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="info">
+				<div class="info-item">
+					<span class="value">2055</span>
+					<span>待发货</span>
+				</div>
+				<div class="divide"></div>
+				<div class="info-item">
+					<span class="value">9</span>
+					<span>退款待处理</span>
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div
+				style="display: flex; align-items: center; padding: 0.8rem 1.2rem; background-color: #FFF; border-bottom: #EAEAEA solid 0.1rem;">
+				<div style="height:1.2rem; width:0.2rem;background-color: #007EFF;"></div>
+				<div style="margin-left: 0.8rem;">今日订单</div>
+			</div>
+			<div style="background-color: #FFF; margin: 1.2rem; border-bottom: #EAEAEA solid 0.1rem;">
+				<div>
+					<div style="display: flex; justify-content: space-between;"><span>客户名字：西门吹雪</span><span
+							class="flex-start redfont"><span class="status red">待发货</span></span></div>
+					<p style="text-overflow: ellipsis; word-break: keep-all;">
+						产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款
+						<span class="rmb">¥</span>18687</span></p>
+			</div>
+			<div style="background-color: #FFF; padding: 1.2rem; border-bottom: #EAEAEA solid 0.1rem;">
+				<div>
+					<div style="display: flex; justify-content: space-between;"><span>客户名字：西门吹雪</span><span
+							class="flex-start redfont"><span class="status red">待发货</span></span></div>
+					<p style="text-overflow: ellipsis; word-break: keep-all;">
+						产品名称：华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调。</p>
+				</div>
+				<p class="flex-space-between"><span>订单时间：2015-02-02-14.30</span></p>
+				<p class="price-line"><span>总价 <span class="rmb">¥</span>18687</span><span class="actual-price">实付款
+						<span class="rmb">¥</span>18687</span></p>
+			</div>
+		</div>
+	</body>
+</html>

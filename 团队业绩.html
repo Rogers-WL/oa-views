@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>团队业绩</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<script src="js/jquery-1.11.1.min.js"></script>
+	</head>
+	<style>
+		html,
+		body {
+			font-size: 10px;
+			margin: 0;
+			padding: 0;
+			background-color: #EAEAEA;
+		}
+
+		.header {
+			position: relative;
+			font-size: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 16px;
+			background-color: #007EFF;
+			color: white;
+		}
+
+		.header>a {
+			position: absolute;
+			left: 0;
+			padding: 0 1.2rem;
+		}
+
+		.back-icon {
+			height: 2rem;
+		}
+
+		.chart-wrap {
+			display: flex;
+			height: 10rem;
+			align-items: center;
+			background-color: #FFF;
+		}
+
+		.chart {
+			height: 100%;
+			width: 50%;
+			display: inline-block;
+		}
+
+		.total-wrap {
+			display: inline;
+			height: 100%;
+			width: 50%;
+		}
+		.total-inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 100%;
+		}
+		.total-item-wrap {
+			display: flex;
+			flex-direction: column;
+		}
+		.title {
+			color: #888;
+			font-size: 1.6rem;
+		}
+		.value {
+			font-size: 2rem;
+		}
+		.list {
+			background-color: #FFF;
+			font-size: 1.6rem;
+			color: #333;
+			margin-top: 0.8rem;
+		}
+		
+		.madel {
+			width: 2.6rem;
+			height: 2.6rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.item-wrap {
+			display: flex;
+			align-items: center;
+			padding: 1.2rem;
+		}
+		
+		.item {
+			flex: 1;
+			display: flex;
+			justify-content: space-between;
+			margin-left: 0.8rem;
+		}
+		
+		.data {
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.amount {
+			
+		}
+	</style>
+	<body>
+		<div class="header">
+			<a href="##">
+				<img src="images/back.png" class="back-icon">
+			</a>
+			<span>团队业绩</span>
+		</div>
+		<div class="chart-wrap">
+
+			<div class="chart" id="container"></div>
+			<div class="total-wrap">
+				<div class="total-inner">
+
+					<div class="total-item-wrap">
+						<span class="title">目标总金额(元)</span>
+						<span class="value">266,254</span>
+					</div>
+					<div class="total-item-wrap">
+						<span class="title">已达成目标(元)</span>
+						<span class="value">124,318</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div
+				style="display: flex; align-items: center; padding: 0.8rem 1.2rem; background-color: #FFF; border-bottom: #EAEAEA solid 0.1rem;">
+				<div style="height:1.2rem; width:0.2rem;background-color: #007EFF;"></div>
+				<div style="margin-left: 0.8rem;">小组业绩贡献</div>
+			</div>
+			<div class="item-wrap">
+				<img class="madel" src="images/NO1.png" />
+				<div class="item">
+					<span class="name">开心榴莲组</span>
+					<span class="amount">销售额：16005.88</span>
+				</div>
+			</div>
+			<div class="item-wrap">
+				<img class="madel" src="images/NO2.png" />
+				<div class="item">
+					<span class="name">平静草莓组</span>
+					<span class="amount">销售额：16005.88</span>
+				</div>
+			</div>
+			<div class="item-wrap">
+				<img class="madel" src="images/NO3.png" />
+				<div class="item">
+					<span class="name">兴奋哈密瓜组</span>
+					<span class="amount">销售额：16005.88</span>
+				</div>
+			</div>
+			<div class="item-wrap">
+				<span class="madel">4</span>
+				<div class="item">
+					<span class="name">悲伤番茄组</span>
+					<span class="amount">销售额：16005.88</span>
+				</div>
+			</div>
+		</div>
+		<script src="js/echarts.min.js"></script>
+		<script>
+			var dom = document.getElementById("container");
+			var myChart = echarts.init(dom);
+			var app = {};
+			var option = {
+				tooltip: {
+					show: false,
+					trigger: 'item'
+				},
+				legend: {
+					show: false,
+					top: '5%',
+					left: 'center'
+				},
+				color: ['#1BBEAB', '#F0F0F0'],
+				series: [{
+					type: 'pie',
+					radius: ['70%', '80%'],
+					center: ['50%', '50%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: true,
+							position: 'center',
+							color: '#4c4a4a',
+							formatter: '{total|' + '70%' + '}' + '\n\r' + '{active|已完成}',
+							rich: {
+								total: {
+									fontSize: '2.4rem',
+									fontFamily: "微软雅黑",
+									color: '#454c5c'
+								},
+								active: {
+									fontFamily: "微软雅黑",
+									fontSize: 16,
+									color: '#6c7a89',
+									lineHeight: 30,
+								},
+							}
+						},
+						emphasis: { //中间文字显示
+							show: true,
+						}
+					},
+					lableLine: {
+						normal: {
+							show: false
+						},
+						emphasis: {
+							show: true
+						},
+						tooltip: {
+							show: false
+						}
+					},
+					data: [{
+							value: 1048,
+							name: '目标总金额'
+						},
+						{
+							value: 735,
+							name: '已完成金额'
+						}
+					]
+				}]
+
+
+			};
+			if (option && typeof option === 'object') {
+				myChart.setOption(option);
+			}
+
+			$('.echarts_top>a').click(function() {
+				var i = $(this).index();
+				$(this).addClass('actives').siblings().removeClass('actives');
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>订单详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<style>
+		html,
+		body {
+			/* background: #f8f9fb; */
+			min-height: 100vh;
+		}
+
+		.order_up {
+			background-color: #fff;
+			display: block;
+		}
+
+		.order_up_box {
+			padding: 10px 20px;
+			font-size: .24rem;
+			color: #666;
+		}
+
+		.order_up_title {
+			font-weight: bold;
+			line-height: 32px;
+			padding: 5px 0;
+		}
+
+		.order_up_comment {
+			border: 0px;
+			padding-left: 4px;
+			font-size: .24rem;
+			line-height: 24px;
+			color: #999;
+			background-color: #f4f4f4;
+		}
+
+		.order_up_inputs {
+			margin-bottom: 15px;
+		}
+
+		.order_up_bot {
+			width: 100%;
+			height: .8rem;
+			border-radius: .1rem;
+			font-size: .24rem;
+			color: #fff;
+			background: #d12d24;
+			margin: 25px 0 5px 0;
+		}
+
+		.leave_up_select {
+			width: 100%;
+			height: 35px;
+			line-height: 34px;
+			border: 1px solid #e2e5ec;
+			border-radius: 5px;
+			padding-left: 5px;
+		}
+
+		.select_money {
+			width: 99%;
+			height: 26px;
+			border: 1px solid #C0C0C0
+		}
+	</style>
+	<body>
+
+		<section class="header flex-center">
+			<a>
+				<img onclick="window.history.back()" src="images/backb.png" class="back_icon">
+			</a>
+			订单详情
+		</section>
+
+		<section class="order_up">
+			<div class="order_up_box">
+
+				<div class="order_up_title flex-start">
+					<p>订单产品</p>
+				</div>
+				<div class="flex-start">
+					<textarea name="textarea" cols="55" rows="4" class="order_up_comment" disabled>华为p40pro.小米智能电视，小米空调华为p40pro.小米智能电视，小米空调</textarea>
+				</div>
+
+
+				<div class="order_up_title flex-start">
+					<p>收货地址</p>
+				</div>
+
+				<div class="flex-start">
+					<textarea cols="55" rows="3" class="order_up_comment" disabled>北京市北京市朝阳区成华大道</textarea>
+				</div>
+
+				<div class="order_up_title flex-start">
+					<p>订单联系信息</p>
+				</div>
+
+				<div class="order_up_inputs flex-start">
+					<textarea cols="55" rows="1" class="order_up_comment" disabled>韩娜娜</textarea>
+				</div>
+				<div class="order_up_inputs flex-start">
+					<textarea cols="55" rows="1" class="order_up_comment" disabled>13812345678</textarea>
+				</div>
+				<div class="order_up_inputs flex-start">
+					<textarea cols="55" rows="1" class="order_up_comment" disabled>16003</textarea>
+				</div>
+
+				<div class="order_up_inputs flex-start">
+					<select id="money_select" disabled class="select_money">
+						<option value="1">全款</option>
+						<option value="2">定金</option>
+					</select>
+				</div>
+				<div class="order_up_title flex-start">
+					<p>已支付金额</p>
+				</div>
+				<div id="show_one" class="order_up_inputs flex-start" style="display: block;">
+					<textarea disabled cols="55" rows="1" class="order_up_comment">16003</textarea>
+				</div>
+				<div class="order_up_title flex-start">
+					<p>订单状态</p>
+				</div>
+				<div id="show_one" class="order_up_inputs flex-start" style="display: block;">
+					<textarea disabled cols="55" rows="1" class="order_up_comment">待发货</textarea>
+				</div>
+
+
+				<div class="order_up_bot flex-center">去发货</div>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小组业绩</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 10px;
+			background-color: #EAEAEA;
+		}
+
+		.header {
+			position: relative;
+			font-size: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 16px;
+			background-color: #007EFF;
+			color: white;
+		}
+
+		.header>a {
+			position: absolute;
+			left: 0;
+			padding: 0 1.2rem;
+		}
+
+		.back-icon {
+			height: 2rem;
+		}
+
+		.sub-header {
+			font-size: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #007EFF;
+			color: white;
+			padding-bottom: 0.8rem;
+		}
+
+		.panel {
+			display: flex;
+			flex-direction: column;
+			font-size: 2rem;
+			padding: 1.2rem 0;
+			background: url(images/head-bg.png) no-repeat;
+			background-size: cover;
+			color: white
+		}
+
+		.panel-line {
+			display: flex;
+			/* justify-content: space-around; */
+			/* padding: 1.2rem 0; */
+		}
+
+		.icon {
+			width: 2.2rem;
+			height: 2.2rem;
+		}
+
+		.item-wrap {
+			flex: 1;
+			display: flex;
+			padding-left: 1.6rem;
+		}
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			margin-left: 0.8rem;
+		}
+
+		.title {
+			font-size: 1.6rem;
+			color: #FFFFFFCC;
+			margin-top: 0.6rem;
+		}
+
+		.value {
+			font-size: 2rem;
+		}
+
+		.list {
+			background-color: #FFF;
+			font-size: 1.6rem;
+			color: #333;
+		}
+
+		.madel {
+			width: 2.6rem;
+			height: 2.6rem;
+			display: flex;
+			justify-content: center;
+		}
+
+		.item-wrap {
+			display: flex;
+			align-items: center;
+			padding: 1.2rem;
+		}
+
+		.item {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			margin-left: 0.8rem;
+		}
+
+		.data {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.amount {
+			flex: 2;
+		}
+
+		.member {
+			flex: 1;
+		}
+	</style>
+	<body>
+		<div class="header">
+			<a href="##">
+				<img src="images/back.png" class="back-icon">
+			</a>
+			<span>小组业绩</span>
+		</div>
+		<div class="sub-header">
+			<span style="font-size: 1.4rem;">2021-08-07</span>
+		</div>
+		<div>
+			<div class="panel">
+				<div class="panel-line">
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-001.png" />
+						<div class="item">
+							<span class="title">支付金额(元)</span>
+							<span class="value">2309.24</span>
+						</div>
+					</div>
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-002.png" />
+						<div class="item">
+							<span class="title">支付订单数</span>
+							<span class="value">40</span>
+						</div>
+					</div>
+				</div>
+				<div class="panel-line">
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-003.png" />
+						<div class="item">
+							<span class="title">新增会员数</span>
+							<span class="value">1</span>
+						</div>
+					</div>
+					<div class="item-wrap">
+						<img class="icon" src="images/icon-wallet-004.png" />
+						<div class="item">
+							<span class="title">新增储值金额(元)</span>
+							<span class="value">10100.01</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div
+				style="display: flex; align-items: center; padding: 0.8rem 1.2rem; background-color: #FFF; border-bottom: #EAEAEA solid 0.1rem;">
+				<div style="height:1.2rem; width:0.2rem;background-color: #007EFF;"></div>
+				<div style="margin-left: 0.8rem;">组员业绩排行</div>
+			</div>
+			<div class="item-wrap">
+				<img class="madel" src="images/NO1.png" />
+				<div class="item">
+					<span class="name">小明</span>
+					<div class="data">
+						<span class="amount">销售额：16005.88</span>
+						<span class="member">新会员：36</span>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrap">
+				<img class="madel" src="images/NO2.png" />
+				<div class="item">
+					<span class="name">小明</span>
+					<div class="data">
+						<span class="amount">销售额：16005.88</span>
+						<span class="member">新会员：36</span>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrap">
+				<img class="madel" src="images/NO3.png" />
+				<div class="item">
+					<span class="name">小明</span>
+					<div class="data">
+						<span class="amount">销售额：16005.88</span>
+						<span class="member">新会员：36</span>
+					</div>
+				</div>
+			</div>
+			<div class="item-wrap">
+				<span class="madel">4</span>
+				<div class="item">
+					<span class="name">小明</span>
+					<div class="data">
+						<span class="amount">销售额：16005.88</span>
+						<span class="member">新会员：36</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
