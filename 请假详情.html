@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全部订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+	</head>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 10px;
+			background-color: #EAEAEA;
+		}
+
+		.header {
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+			padding: 16px;
+			background-color: #007EFF;
+			color: white;
+		}
+
+		.header>a {
+			position: absolute;
+			left: 0;
+			padding: 0 1.2rem;
+		}
+
+		.back-icon {
+			height: 2rem;
+		}
+		.info-wrap {
+			display: flex;
+			flex-direction: column;
+			background-color: #FFFFFF;
+		}
+		.user-info-wrap {
+			display: flex;
+			align-items: center;
+			padding: 1.2rem;
+			
+		}
+		.avatar {
+			width: 4rem;
+			height: 4rem;
+		}
+		.name {
+			padding: 0 0.8rem;
+		}
+		.status {
+			color: #1ABD00;
+			border: #1ABD00 solid 0.1rem;
+			padding: 0.2rem 0.4rem;
+			border-radius: 0.4rem;
+		}
+		.divide {
+			height: 0.1rem;
+			margin: 0 1.2rem;
+			border-bottom: #EAEAEA solid 0.1rem;
+		}
+		.detail-wrap {
+			display: flex;
+			flex-direction: column;
+			padding: 1.2rem;
+			font-size: 1.6rem;
+		}
+		.title {
+			font-weight: bold;
+			margin-bottom: 0.8rem;
+		}
+		.item {
+			display: flex;
+			padding: 0.4rem 0.8rem 0.4rem 1.2rem;
+		}
+		.key {
+			padding-right: 1.2rem;
+			color: #888;
+		}
+		.approve-wrap {
+			margin-top: 0.8rem;
+			background-color: #FFF;
+		}
+	</style>
+	<body>
+		<div class="header">
+			<a href="##">
+				<img onclick="window.history.back()" src="images/back.png" class="back-icon">
+			</a>
+			请假详情
+		</div>
+		<div class="info-wrap">
+			<div class="user-info-wrap">
+				<img class="avatar" src="images/user_header2.png" />
+				<span class="name">张伟的请假</span>
+				<span class="status">已通过</span>
+			</div>
+			<div class="divide"></div>
+			<div class="detail-wrap">
+				<span class="title">申请详情</span>
+				<div class="item">
+					<span class="key">审批编号</span>
+					<span class="value">202107300001</span>
+				</div>
+				<div class="item">
+					<span class="key">提交时间</span>
+					<span class="value">2021/07/30 07:09</span>
+				</div>
+				<div class="item">
+					<span class="key">请假类型</span>
+					<span class="value">调休假</span>
+				</div>
+				<div class="item">
+					<span class="key">开始时间</span>
+					<span class="value">2021/7/30 上午</span>
+				</div>
+				<div class="item">
+					<span class="key">结束时间</span>
+					<span class="value">2021/7/30 下午</span>
+				</div>
+				<div class="item">
+					<span class="key">请假时长</span>
+					<span class="value">1天</span>
+				</div>
+				<div class="item">
+					<span class="key">请假事由</span>
+					<span class="value">休息</span>
+				</div>
+				
+			</div>
+		</div>
+		<!-- <div class="approve-wrap">
+			<div class="detail-wrap">
+				<span class="title">审批流程</span>
+			</div>
+		</div> -->
+	</body>
+</html>
