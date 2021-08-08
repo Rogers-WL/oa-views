@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>出差申请</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+	</head>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 10px;
+			background-color: #EAEAEA;
+		}
+		textarea {
+			background: none;
+			border: none;
+			font-size: 1.6rem;
+			margin-top: 0.4rem;
+		}
+		textarea:focus {
+			outline: none;
+		}
+		input {
+			background: none;
+			border: none;
+			font-size: 1.6rem;
+		}
+		input:focus {
+			outline: none;
+		}
+
+		.header {
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+			padding: 16px;
+			background-color: #007EFF;
+			color: white;
+		}
+
+		.header>a {
+			position: absolute;
+			left: 0;
+			padding: 0 1.2rem;
+		}
+
+		.back-icon {
+			height: 2rem;
+		}
+		.item-wrap-col {
+			display: flex;
+			flex-direction: column;
+			background-color: #FFF;
+			padding: 0.8rem;
+			font-size: 1.6rem;
+		}
+		.item-wrap-row {
+			display: flex;
+			background-color: #FFF;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0.8rem;
+			font-size: 1.6rem;
+			border-bottom: #EAEAEA solid 0.1rem;
+		}
+		.item-wrap-row input {
+			text-align: right;
+		}
+		.gap {
+			height: 0.8rem;
+		}
+		.key {
+			font-size: 1.6rem;
+		}
+		.red {
+			color: #FF0000;
+		}
+		
+		.btn-submit {
+			display: flex;
+			height: 4rem;
+			background-color: #007EFF;
+			align-items: center;
+			justify-content: center;
+			color: #FFFFFF;
+			font-size: 1.6rem;
+			border-radius: 2rem;
+			margin: 1.2rem;
+		}
+		
+	</style>
+	<body>
+		<div class="header">
+			<a href="##">
+				<img onclick="window.history.back()" src="images/back.png" class="back-icon">
+			</a>
+			出差申请
+		</div>
+		
+		<div class="item-wrap-col">
+			<span class="key">出差事由<span class="red">*</span></span>
+			<textarea placeholder="请输入"></textarea>
+		</div>
+		<div class="gap"></div>
+		<div class="item-wrap-row">
+			<span class="key">出差地点<span class="red">*</span></span>
+			<input placeholder="请输入" />
+		</div>
+		<div class="gap"></div>
+		<div class="item-wrap-row">
+			<span class="key">开始时间<span class="red">*</span></span>
+			<input placeholder="请选择"/>
+		</div>
+		<div class="item-wrap-row">
+			<span class="key">结束时间<span class="red">*</span></span>
+			<input placeholder="请选择"/>
+		</div>
+		<div class="item-wrap-row">
+			<span class="key">出差时长<span class="red">*</span></span>
+			<span class="text">0天</span>
+		</div>
+	
+		<!-- <div class="approve-wrap">
+			<div class="detail-wrap">
+				<span class="title">审批流程</span>
+			</div>
+		</div> -->
+		<div class="btn-submit">提交</div>
+	</body>
+</html>
